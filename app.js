@@ -314,4 +314,56 @@ console.log(typeof PC);
 let cart = null
 console.log(cart);
 console.log(typeof cart);
-   
+
+// Type converion/coersion-convercion is when we manually convert from one data type to another, but coersion is wen javascript does the conversion behind the scene.
+
+// conversion-
+const inputYear =Number('1986');
+let addedYear =inputYear + 18
+
+console.log(addedYear);
+console.log(typeof inputYear);
+
+// lets try and convert sth dts not actually a number
+
+let personName = Number('eggy');
+console.log(personName);
+console.log(typeof personName);
+console.log(typeof NaN);
+console.log(String(23),23);
+
+
+// coercion 
+
+console.log('I am ' + String(22) + ' years old');
+console.log('22' * 3);
+console.log('22' + 4);
+console.log('22' > '2');
+console.log('22' - '2');
+
+let z = Number('1') + 1
+let w = z - 1
+console.log(w);
+
+// comparsion operators
+// >, < ==(equalto), ===, !=(not equalto), >=, <=
+
+let YEAR = 2023
+console.log(YEAR > 2001);
+console.log(YEAR < 2001);
+console.log(YEAR >= 2001);
+console.log(YEAR != 2001);
+
+// Loose comparison operator == only checks for value and not data type
+let SCORE = 100;
+let SCORE2 = SCORE == 100
+let SCORE3 = SCORE !=100
+
+console.log(SCORE2);
+console.log(SCORE3);
+
+// strict comparison operation === checks both value and data types
+let SCORE4 = SCORE === 100
+let SCORE5 = SCORE !== 100
+
+console.log(SCORE4);
