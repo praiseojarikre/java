@@ -367,3 +367,28 @@ let SCORE4 = SCORE === 100
 let SCORE5 = SCORE !== 100
 
 console.log(SCORE4);
+
+
+// control flow- loops and conditional statements
+
+console.log('lifing weight repition 1 🏋️‍♀️');
+console.log('lifing weight repition 2 🏋️‍♀️');
+console.log('lifing weight repition 3 🏋️‍♀️');
+console.log('lifing weight repition 4 🏋️‍♀️');
+console.log('lifing weight repition 5 🏋️‍♀️');
+console.log('lifing weight repition 6 🏋️‍♀️');
+console.log('lifing weight repition 7 🏋️‍♀️');
+console.log('lifing weight repition 8 🏋️‍♀️');
+console.log('lifing weight repition 9 🏋️‍♀️');
+console.log('lifing weight repition 10 🏋️‍♀️');
+
+// loop uses the for-keyword,initialiser,condition,final expression and block of code.
+
+for (let i = 1; i < 10; i++) {
+    console.log('Eggy lifts weight' + i + '🏋️‍♀️');
+}
+
+let guys = ['Ibrahim','Martins','Tunde']
+for( let i =0; i<guys.length; i++){
+    console.log(guys[i]);
+}
