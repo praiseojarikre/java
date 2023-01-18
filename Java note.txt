@@ -1,0 +1,40 @@
+Javascript deals with fuctionality.
+Steps
+git status
+git init
+git status
+git add .
+git status
+git commit -m 'firstcommmit'
+git status
+create repo and copy git branch -M main and last 3 lines of git
+  
+Javascript-
+It is an OOP-Object oriented programme.
+console is a testing tool for developer.
+Variables are storage facilities
+values are piece of data
+Declarations are used to call out variables.(Var,let, const)
+Var-has the ability to redeclare reassign and declare
+let-declare and reassign
+CONST-declare- constraints in variable naming.
+variable names can only contain letters numbers, underscore,dollarsign but cant start with a number.
+dont give spaces,use carmel case,
+reserved names cnt be used as a variable name,since its reserved.
+please when naming variables,use meaningful names.
+Data types 
+1.strings-are used for holding text/alphabets('')
+2.Numbers- used for holding numeric numbers
+3.Booleen-are used for optional statements TRUE/FALSE
+4.Null- doesnt hold a value set by the programmer.
+5.Undefined-usually set by the systems,
+6.object-arrays,dates functions etc
+7.symbols
+8.BigInt
+ Data-types
+1.Primitive data type-hold only one value.
+2.Non Primitive data tyepe-holds more than one value like objects eg arrays,dates.
+
+
+17 January 2022
+Template litrals-helps to join strings to variables by using backticks(~) and interpolations
