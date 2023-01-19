@@ -392,3 +392,49 @@ let guys = ['Ibrahim','Martins','Tunde']
 for( let i =0; i<guys.length; i++){
     console.log(guys[i]);
 }
+// ========================================================
+// 19th January 2023
+// ========================================================
+
+
+// while loop
+let babes = ['taiwo','oyin','praise']
+ let i = 0
+
+ while (i <babes.length){
+    console.log((babes[i].toUpperCase()));
+    i++
+ }
+
+//  ==========for in loop
+for (let p  in babes) {
+    console.log(babes[p].toUpperCase());
+}
+
+// ==========for of
+for(let b of babes){
+    console.log(b.toUpperCase());
+}
+
+// Work
+
+let colors = ['blue', 'pink', 'black', 'red']
+for( let i =0; i<colors.length; i++){
+    console.log(colors[i]);
+}
+
+let b = 0
+while (b <colors.length){
+   console.log((colors[b].toUpperCase()));
+   b++
+}
+
+for (let i  in colors) {
+    console.log(colors[i].toUpperCase());
+}
+
+for(let i of colors){
+    console.log(i.toUpperCase());
+}
+
+// conditional statements if,else,else if
