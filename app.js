@@ -438,3 +438,155 @@ for(let i of colors){
 }
 
 // conditional statements if,else,else if
+ let AGE = 500
+
+ if (AGE === 500){
+    console.log('oga u don old');
+ }else{
+    console.log('please type in a valid age');
+ }
+
+ let password ='passwordssss';
+ console.log(password.length);
+
+ if(password.length >= 12){
+    console.log('thats a very strong password');
+ }else if (password.length >=8){
+    console.log('password is good');
+ }else if (password.length >=4){
+    console.log('password is weak');
+ }else{
+    console.log('please password should be at least 4 hrs long');
+ }
+
+//  Logical operators
+// || (double pipe) means logical or
+// &(ampersand) means logical and
+
+// For logical and- as afr there is a false in the statement if will read as false
+//FOR LOGICAL AND 
+// True && True = True
+// True && False = False
+// False && True = False 
+// False && False = False
+
+console.log(true && true);
+console.log(true && false);
+console.log( false && true);
+console.log( false && false);
+console.log(1111111111111111111111);
+
+// for logical or- as far as there is a true in the statement it will read as true.
+console.log(true || true);
+console.log(true || false);
+console.log(false || true);
+console.log(false || false);
+console.log(!false);
+console.log(!true);
+
+let PASSWORD = 'pass@';
+// if(PASSWORD.length >= 7 && PASSWORD.includes('@')){
+//   console.log('super strong');
+// }else if(PASSWORD.length >= 4 || PASSWORD.includes('$')){
+//   console.log('password is good');
+// }else{
+//   console.log('Password is\'nt good enuff');
+// }
+if(PASSWORD.length >= 7 && PASSWORD.includes('@')){
+  console.log('super strong');
+}else if(PASSWORD.length >= 15 || PASSWORD.includes('@') && PASSWORD.length >= 2 && PASSWORD.includes('*') && PASSWORD.length >= 17){
+  console.log('password is good');
+}else{
+  console.log('Password is\'nt good enuff');
+}
+
+// let newPassword = prompt('type a password')
+
+// if (newPassword.length >=12 && newPassword.includes('@')){
+//     alert('very very strong')
+// }else if(newPassword.length >= 8 || newPassword.includes('*')){
+// alert('password is good')
+// }else{
+//     alert('password is weak')
+// }
+
+// let inputtedNumber = prompt ('please type a  number');
+
+// if (inputtedNumber % 2=== 0){
+//     alert('even number')
+// }else{
+//     alert('odd number')
+// }
+
+// break and continue
+let Result =[20,40,0,50,100,15,4,5,7]
+
+for (let a = 0; a < Result.length; a++) {
+    // console.log(Result[a]);
+    if (Result[a] === 0){
+        continue
+    }
+    if (Result[a] === 100){
+    break
+    }
+    console.log(Result[a]);
+}
+// Using if statement
+let Grade = 'Z'
+
+if(Grade === 'A'){
+  console.log('You got A');
+}else if(Grade === 'B'){
+  console.log('You got B');
+}else if(Grade === 'C'){
+  console.log('You got C');
+}else if(Grade === 'D'){
+  console.log('You got D');
+  
+}else{
+  console.log('You Failed!!!');
+}
+// Using Switch case
+
+let Points = 'B'
+switch(Points){
+  case 'A':
+    console.log('You got A');
+    break
+  case 'B':
+    console.log('You got B');
+    break
+  case 'C':
+    console.log('You got C');
+    break
+  case 'D':
+    console.log('You got D');
+    break
+  default:
+    console.log('You failed');
+}
+
+// using data below...calculate the BMI for both Abidun and Oyin...
+// and also with a conditional statement....if Abiodun's BMI is more dan Oyin...
+// print to d console Abiodun's Bmi is greater than Oyin,else
+// bmi = mass / height ** 2
+// Given dt Abiodun/Oyin height   10/9
+// Abiodun/Oyinweight 60/70
+// Hint Use if statement
+
+let AbiodunHeight = 10;
+let OyinHeight = 9;
+let AbiodunWeight = 60;
+let OyinWeight = 70;
+
+let AbiodunBMI = AbiodunHeight / AbiodunWeight ** 2
+console.log(AbiodunBMI);
+
+let OyinBMI = OyinHeight / OyinWeight ** 2
+console.log(OyinBMI);
+
+if(AbiodunBMI > OyinBMI){
+  console.log('abiodun bmi is greater than oyin bmi');
+} else{
+  console.log('anything you like');
+}
