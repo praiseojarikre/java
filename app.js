@@ -1,5 +1,5 @@
 // Javascript-
-// It is an OOP-Object oriented programme.
+// It is a high level OOP-Object oriented programme.
 // console is a testing tool for developer.
 // Variables are storage facilities
 // values are piece of data
@@ -384,7 +384,7 @@ console.log('lifing weight repition 10 🏋️‍♀️');
 
 // loop uses the for-keyword,initialiser,condition,final expression and block of code.
 
-for (let i = 1; i < 10; i++) {
+for (let i = 1; i <= 10; i++) {
     console.log('Eggy lifts weight' + i + '🏋️‍♀️');
 }
 
@@ -579,14 +579,235 @@ let OyinHeight = 9;
 let AbiodunWeight = 60;
 let OyinWeight = 70;
 
-let AbiodunBMI = AbiodunHeight / AbiodunWeight ** 2
+let AbiodunBMI = AbiodunWeight / AbiodunHeight ** 2
 console.log(AbiodunBMI);
 
-let OyinBMI = OyinHeight / OyinWeight ** 2
+let OyinBMI = OyinWeight / OyinHeight ** 2
 console.log(OyinBMI);
 
 if(AbiodunBMI > OyinBMI){
   console.log('abiodun bmi is greater than oyin bmi');
 } else{
-  console.log('anything you like');
+  console.log('Oyin Bmi is greater than abiodun bmi');
 }
+// ========================================================================================================
+// 23rd January 2023
+// ========================================================================================================
+// Tenary operators====
+  
+
+AbiodunBMI > OyinBMI
+? console.log("abiodun's bmi is greater than oyin's bmi")
+: console.log("oyin's bmi is greater than abiodun's bmi");
+
+// global scope, local (black and function) scope
+
+let AGES = 1000
+
+if(true){
+  let AGES = 2000
+  console.log('inside 1st block: ' + AGES);
+  if(true){
+      let AGES = 3000
+      console.log('inside 2nd code block' + AGES);
+  }
+}
+console.log('outside block of code: ' + AGES);
+{
+  let d = 'Doyin';
+  console.log(d);
+}
+
+// Functions-functions are building blocks of any language(object data type) help to write code somewhere and use when needed.
+// types of functions- Declaration,expression and arrow function 
+// its can only work when it is CALL,RUN,INVOKE. 
+// Functions are re useable
+// keyword for ftn is ftn keyword,ftn name and a block of code
+
+// function declaration
+// it accepts hoisting
+
+function team() {
+  let name = 'oyin'
+  console.log(' hello ' + name);
+}
+team()
+
+// funtion expression
+// it does not accept hoisting
+
+let speak = function() {
+  let myColor ='yellow';
+  console.log(myColor); 
+}
+speak()
+
+
+// Arrow ftn
+// it doesnt accept hoisting
+
+let newTrainer = ()=>{
+  let myColor = 'ýellow'
+  console.log(myColor);
+}
+
+newTrainer()
+
+// parameters and arguments
+//  Parameter is to the variable
+// Argument is to the invoke
+
+function useName (name) {
+    let person = `Hi my name is ${name}`
+    console.log(person);
+}
+useName('Oyin')
+
+let useSpeaks = function(names){
+    let person = 'Hello my name is ' + names
+    console.log(person);
+}
+useSpeaks('Emma')
+
+let useGreet = day =>{
+    let statement = `Good ${day}`
+    console.log(statement);
+}
+useGreet('afternoon')
+
+  const useGreets = function(name,time){
+    let description = `Good ${time} ${name}`
+    console.log(description);
+
+}
+useGreets('Oyin','afternoon')
+
+let calcAge = year=>{
+    let personYear = 2023 - year
+    console.log(personYear);
+}
+calcAge(1995)
+
+// We have 2 tech teams(Spartans and alpha)
+// They compete against each other 3 times, the winner with highest average score wins the trophy.
+// Calculate the average score for each team using data below.
+// Spartans score - 60, 70, 80
+// Alpha score - 88, 91, 120
+// Compare the teams average score to determine the winner of the competition and print to the console...
+// Hint, use an if, else statements
+// and also ternary opertor
+
+let Spartans = (60,70,80)
+let totalSpartans = (60+70+80)
+let AvrgSpartans = (totalSpartans / 3)
+
+
+let  Alpha = (88,91,120)
+let totalAlpha = (88+91+120)
+let AvrgAlpha = (totalAlpha / 3)
+
+// if (AvrgSpartans > AvrgAlpha) {
+//   console.log('spartans is greater');
+// } else{
+//   console.log('not applicable');
+// }
+
+if (AvrgAlpha > AvrgSpartans) {
+  console.log('Alpha is the winner');
+} else{
+  console.log('not the winner');
+}
+
+AvrgAlpha > AvrgSpartans
+? console.log("alpha is the winner")
+: console.log("spartans is the loser");
+
+ // ===================================================================
+// 24th jan 2023
+// =====================================================================
+//  Returning variables from a function
+
+// You can not have more than one return keyword. Every command after the return keyword is useless.
+// The essence of the return is to allow you to use a varaibale outside the function scope(block).
+
+let getProgramme  = ()=>{
+  let stack = 'javascript fullstack'
+  console.log(stack);
+  return stack
+
+}
+let newStack = getProgramme()
+
+console.log(newStack);
+
+let getUser = food =>{
+  let word = `Hello Praise did you know Denyifa ate ${food} wraps of eba`
+  console.log(word);
+  return word
+}
+
+let newWord = getUser(20)
+console.log(newWord);
+
+let reterate = newWord + ' after class'
+console.log(reterate);
+
+let fees = [60,80,0,120];
+let peeps = ['Praise', 'Charles', 'Oyin', 'Tayo']
+
+function getDetails(sth, newSth) {
+  for(let i = 0; i < sth.length; i++){
+    if(sth[i] ===0){
+      continue
+    }
+    console.log((sth[i]));
+  }
+  
+  for(let i = 0; i < newSth.length; i++){
+    console.log(newSth[i].toUpperCase());
+  }
+}
+getDetails(fees, peeps)
+
+// Exercise
+// There are 2 teams, Alpha and Spartans.
+// Each team competes 3 times and the average of the 3 scores is calculated( one average score per team)
+// A team only wins if it has atleast double the average score of the other team otherwise no team wins.
+// 1) create an arrow function 'calcAverage' to calculate the average of 3 scores. 
+// 2) use the function to calculate the average for both teams.
+// 3) Create a function 'checkWinner' that takes the average score of each team as parameters ('aveAlpha' and 'aveSpartan') and then log the winner to the console together with the victory points, according to the rule above, i.e Spartan wins(30, vs 13)
+// 4) use the checkWinner function to determine the winner for both Data
+// 5) ignore draws this time
+// Test Data 1 -- Alpha scores 43, 21 and 73. Spartan scores 63,55, and 47
+// Test Data 2 -- Alpha scores 87,55 and 39. Spartan scores 21,33 and 27
+
+
+let calcAverage = (a,b,c) =>{
+  let average = [a+b+c] / 3
+  // console.log(average);
+  return average
+}
+calcAverage(1,2,3)
+let alphascores =calcAverage (43,21,73)
+console.log(alphascores);
+let Spartanscores = calcAverage(63,55,47)
+console.log(Spartanscores);
+
+function checkwinner(aveAlpha,avespartan) {
+  if (aveAlpha > 2 * avespartan){
+    console.log(`alpha wins ${aveAlpha} vs ${avespartan}`);
+  }else{
+    console.log(`spartan wins ${avespartan} vs ${aveAlpha}`);
+  }
+}
+checkwinner(alphascores,Spartanscores)
+
+alphascores > Spartanscores
+? console.log('alpha wins')
+: console.log('spartan wins');
+
+
+
+// higher order and call back function
+// higher order ftns accepts another functon as an argument or returns another function as a result
+// call back functions are ftns passed to another function as an argument and executed inside that ftn.
