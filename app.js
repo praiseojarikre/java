@@ -25,6 +25,10 @@
 // 2.Non Primitive data tyepe-holds more than one value like objects eg arrays,dates.
 
 "use strict"
+import { Data, PEOPLE} from "./db.js";
+console.log(Data);
+console.log(PEOPLE);
+
 
 
 
@@ -811,3 +815,214 @@ alphascores > Spartanscores
 // higher order and call back function
 // higher order ftns accepts another functon as an argument or returns another function as a result
 // call back functions are ftns passed to another function as an argument and executed inside that ftn.
+
+
+
+
+function getHello() {
+  // let sayHI = 'hi'
+  return 'hi' 
+}
+
+let getReport = (talk)=> {
+  console.log(talk());
+
+  let state = `${talk()} taiwo did you see ibrahim`
+  console.log(state);
+}
+
+getReport(getHello)
+
+
+// object ------object literal,math object,dates
+// higher order functions(foreaCh,map,filter,find,findindex,reduce)
+// DOM(document object model)
+
+// Object has key and value. Both are called property
+
+let client = ['Oyin', 'Damola', 'black', ['Taiwo', 'Praise', 'Charles','Ibrahim'], 2023 - 1986]
+console.log(client);
+console.log(typeof client);
+
+let customer = {
+    firstName: 'Oyin',
+    lastName: 'Damola',
+    complexion: 'black',
+    friends: ['Taiwo', 'Praise', 'Charles','Ibrahim'],
+    age: 2023-1986,
+    date: Date(),
+    canDrive: true,
+
+}
+console.log(customer);
+console.log(typeof customer);
+
+let newCustomer ={
+  country: 'Nigeria',
+  state: 'Oyo'
+}
+
+let finalCustomer = {...customer, ...newCustomer}
+console.log(finalCustomer);
+
+// ===============================================
+// 25th january 2023
+// ===============================================
+
+// dot vs backet
+let newApplicant = {
+  firstName: 'Tayo',
+  lastName: 'John',
+  skinColor: 'dark',
+  tribe: 'yoruba',
+  age: 18,
+  address: {
+    stateOfOrigin: 'Ibadan',
+    stateOfResidence: 'Lagos',
+    lgs: 'surulere'
+  },
+  favFoods: ['banga', 'egusi', 'rice', 'amala'],
+  canDrive: true,
+  profession: 'senior front-end Dev',
+  canSmoke: false,
+  numberOfKids: null,
+}
+
+// dot notation
+// accessing firstname
+let newApplicantFirstName = newApplicant.firstName.toUpperCase()
+console.log(newApplicantFirstName);
+// acccessing favfoods
+let newApplicantFavfoods = newApplicant.favFoods
+console.log(newApplicantFavfoods);
+// accesing stateofresidence
+let newApplicantaddress = newApplicant.address.stateOfResidence
+console.log(newApplicantaddress);
+
+// Bracket
+// accessing firstname
+let BracketApplicantfirstname = newApplicant['firstName'].toUpperCase()
+console.log(BracketApplicantfirstname);
+// accesssing stateofresidence
+let BracketApplicantaddress = newApplicant['address']['StateOfResidence']
+console.log(BracketApplicantaddress);
+
+// Destructuring objects
+let account = {
+  namess : 'uloma',
+  ages : 50,
+  colour : 'black',
+}
+console.log(account);
+
+let nameInaccount =account.namess
+console.log(nameInaccount); 
+let ageInAccount = account.ages
+console.log(ageInAccount);
+
+// Now let's use destructuring
+let {ages, namess, colour} = account
+console.log(ages);
+let removeAge = delete account.ages
+console.log(account);
+
+// object method
+let passenger = {
+  firstName: 'Oyeindenyifa',
+  lastName: "Diegbegha",
+  year: 2023,
+  busFareInNaira: 200,
+  pocketMoneyInNaira: 1000,
+  currentDate: Date(),
+  calcBal: function(){
+    let statement = `${this.firstName} has ${this.pocketMoneyInNaira - this.busFareInNaira} naira`
+    console.log(statement);
+    // return statement
+  },
+  
+}
+
+passenger.calcBal()
+console.log(passenger);
+
+console.log(this);
+// 'this' can be used to replace a variable if used inide the curly bracket, and it can be used to call the
+//  whole window if used without being inside the bracket.
+  
+  // Exercise
+  // 1)Create an object for Ibrahim and Oyin... With properties(full name, mass and height)
+  // 2) create a 'calcBMI' method on both object to calculate the BMI(same method on both objects).
+  //  Store the BMI value to a property, and also return from the method.
+  // 3) then log to the console who has the higher BMI, together with the fullname and the respective BMI 
+  // .... Example Ibrahim BMI(30.1) is higher than Oyin's BMI(29.9)
+  // Test Data
+  // Ibrahim's weight 76 and height is 1.99
+  // Oyin's weight 80 and height is 2.1
+  
+  
+  
+  // Ibrahim's data
+  let Ibrahim = {
+    fullName: 'Ibrahim',
+    mass:76,
+    heigth: 1.99,
+    calcBMI: function(){
+      return this.mass / this.heigth ** 2
+    }
+  }
+
+  let ibrahimBMI = Ibrahim.calcBMI()
+  console.log(ibrahimBMI)
+  // ===================
+  // Oyin's data
+  let Oyin = {
+    fullName: 'Oyin',
+    mass:80,
+    heigth: 2.1,
+    calcBMI: function(){
+      return this.mass / this.heigth ** 2
+    }
+  }
+  
+  let oyiBMI = Oyin.calcBMI()
+  console.log(oyiBMI)
+  
+  // Conditional statement
+  
+  let BMI = ibrahimBMI > oyiBMI ? `Ibrahim's BMI ${ibrahimBMI} is higher than Oyin's BMI ${oyiBMI}`: `Oyin's BMI ${oyiBMI} is higher `
+  
+  console.log(BMI);
+
+
+  // Arrays methods
+  // higher order functions(map,reduce,filter,for each, find,findindex)
+  // for loop=================================
+  // modules means import and export of data
+  for (let i = 0; i < Data.length; i++) {
+    console.log(Data[i]);
+    
+  }
+  // for each()
+  // it doesnt return a new array
+  // it loops
+
+Data.forEach (
+  (s)=>{
+    console.log(s.name);
+  }
+)
+function newData(singleData) {
+  console.log(singleData);
+}
+
+Data.forEach(newData)
+
+// MAP METHOD
+// IT returns a new array
+// it doesnt change the size of the original array
+// uses value from the original array
+// it loops
+
+
+let anodaPerson = PEOPLE. map(person => person)
+console.log(anodaPerson);
